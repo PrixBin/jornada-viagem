@@ -1,9 +1,17 @@
 .main-header {
-  /* Adicionar ... Alex */
+  background-color: var(--background-tertiary-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 48px;
+  position: relative;
 }
 
 .logo {
-  /* Adicionar 2 ... Alex */
+  font-display: inline-block;
+  height: 48px;
+  width: auto;
 }
 
 .img-mobile {
@@ -17,9 +25,23 @@
   margin-top: 24px;
 }
 
+.navigation-menu input[type="checkbox"] {
+  display: none; /* Esconde o checkbox, só o label (ícone) é clicável */
+}
+
+.navigation-menu label {
+  cursor: pointer;
+}
+
 input[type="checkbox"]:checked ~ nav {
   /* Faz com que o menu de navegação seja exibido quando o checkbox estiver marcado - Seletor de irmandade*/
-  /* Adicionar 1 ... Alex */
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 48px 24px;
+  background-color: var(--background-tertiary-color);
 }
 
 nav {
@@ -29,6 +51,8 @@ nav {
 .list-links {
   /* Estiliza a lista de links do menu de navegação */
   list-style: none; /* Remove os marcadores da lista */
+  margin: 0;
+  padding: 0;
 }
 
 .list-links li {
@@ -52,7 +76,7 @@ nav {
   /* Adiciona estilos para telas com largura mínima de 768px */
   .navigation-menu {
     margin-top: 0;
-    width: 467px;
+    width: auto;
   }
   .navigation-menu label {
     display: none; /* Oculta o rótulo do menu de navegação em telas maiores */
@@ -62,8 +86,9 @@ nav {
     display: block; /* Exibe o menu de navegação em telas maiores */
   }
   .navigation-menu ul {
-    /* Adiciona estilos para a lista de links do menu de navegação */
-    /* Adicionar 3 ... Alex */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
   .navigation-menu li {
     margin: 0;
